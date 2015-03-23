@@ -126,6 +126,41 @@ There is an undocumented directory called **exp**. This is where I write and tes
 
 The directory **styles** contains a css file containing the style guide for the book. The default look and feel of IPython Notebook is rather plain. Work is being done on this. I have followed the examples set by books such as [Probabilistic Programming and Bayesian Methods for Hackers](http://nbviewer.ipython.org/github/CamDavidsonPilon/Probabilistic-Programming-and-Bayesian-Methods-for-Hackers/blob/master/Chapter1_Introduction/Chapter1_Introduction.ipynb). I have also been very influenced by Professor Lorena Barba's fantastic work, [available here](https://github.com/barbagroup/CFDPython). I owe all of my look and feel to the work of these projects. 
 
+
+# ipymd / Atlas / Docker
+
+You can also use [ipymd](https://github.com/rossant/ipymd) to write using Markdown.  This has the advantage of making the text more git-friendly for collaborators, and will allow you to generate a high-quality PDF using O'Reilly Atlas.  There is also a Docker image you can use that will simplify using the notebook in general.
+
+## Building the Docker image:
+
+```
+docker build -t odewahn/kalman .
+```
+
+## Convert the existing ipynb formats to markdown
+
+```
+docker run -it \
+   -v $(pwd):/usr/data \
+   -w /usr/data \
+   odewahn/kalman \
+   ipymd --from notebook --to atlas *.ipynb
+```
+
+## Running the notebook server
+
+```
+docker run -it \
+   -p 8888:8888 \
+   -v $(pwd):/usr/data \
+   -w /usr/data \
+   odewahn/kalman \
+   sh -c "ipython notebook --ip=0.0.0.0 --no-browser"
+```
+
+Once the server starts, open `192.168.59.103:8888`
+
+
 License
 -----
 <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Kalman and Bayesian Filters in Python</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://github.com/rlabbe/Kalman-and-Bayesian-Filters-in-Python" property="cc:attributionName" rel="cc:attributionURL">Roger R. Labbe</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.

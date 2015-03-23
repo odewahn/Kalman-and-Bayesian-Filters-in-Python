@@ -2,7 +2,6 @@
   "branch": "master",
   "files": [
     "00_Preface.md",
-    "01_g-h_filter.md",
     "02_Discrete_Bayes.md",
     "03_Least_Squares_Filters.md",
     "04_Gaussians.md",

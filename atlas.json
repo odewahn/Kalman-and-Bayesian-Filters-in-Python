@@ -1,6 +1,7 @@
 {
   "branch": "master",
   "files": [
+    "toc.md",
     "00_Preface.md",
     "04_Gaussians.md",
     "05_Kalman_Filters.md"
@@ -9,7 +10,7 @@
     "pdf": {
       "version": "web",
       "index": false,
-      "toc": false,
+      "toc": true,
       "syntaxhighlighting": false,
       "show_comments": false
     },

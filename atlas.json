@@ -1,24 +1,7 @@
 {
   "branch": "master",
   "files": [
-    "00_Preface.md",
-    "01_g-h_filter.md",
-    "02_Discrete_Bayes.md",
-    "03_Least_Squares_Filters.md",
-    "04_Gaussians.md",
-    "05_Kalman_Filters.md",
-    "06_Multivariate_Kalman_Filters.md",
-    "08_Designing_Kalman_Filters.md",
-    "09_Nonlinear_Filtering.md",
-    "10_Unscented_Kalman_Filter.md",
-    "11_Extended_Kalman_Filters.md",
-    "12_Designing_Nonlinear_Kalman_Filters.md",
-    "13_Smoothing.md",
-    "14_Adaptive_Filtering.md",
-    "15_HInfinity_Filters.md",
-    "16_Ensemble_Kalman_Filters.md",
-    "Appendix_A_Installation.md",
-    "Appendix_B_Symbols_and_Notations.md"
+    "00_Preface.md"
   ],
   "formats": {
     "pdf": {

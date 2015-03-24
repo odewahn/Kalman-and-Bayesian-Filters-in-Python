@@ -36,5 +36,6 @@
     }
   },
   "theme": "oreillymedia/animal_theme",
-  "title": "Kalman and Bayesian Filters in Python"
+  "title": "Kalman and Bayesian Filters in Python",
+  "templating": false
 }

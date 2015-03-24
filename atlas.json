@@ -1,7 +1,7 @@
 {
   "branch": "master",
   "files": [
-    "toc.md",
+    "toc.html",
     "00_Preface.md",
     "04_Gaussians.md",
     "05_Kalman_Filters.md"
